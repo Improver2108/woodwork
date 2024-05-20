@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const ImageSlideShow = () => {
@@ -13,6 +14,8 @@ const ImageSlideShow = () => {
   };
 
   useEffect(() => {
+    console.log("use effect is running");
+    resetTimeout();
     timeoutRef.current = window.setTimeout(
       () =>
         setImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1)),
@@ -24,15 +27,18 @@ const ImageSlideShow = () => {
   }, [imageIndex]);
 
   return (
-    <section className="relative">
+    <section className="relative w-full">
       {images.map((image, index) => (
-        <div
-          className={`absolute transition-opacity opacity-${
-            index === imageIndex ? 100 : 0
+        <Image
+          key={index}
+          src={`/${image}.png`}
+          className={`md:px-6 lg:px-16 mt-3 absolute transition-opacity duration-1000 w-full object-cover ${
+            index === imageIndex ? "opacity-100" : "opacity-0"
           }`}
-        >
-          {image}
-        </div>
+          alt="Home Image"
+          width={2000}
+          height={2000}
+        />
       ))}
     </section>
   );
