@@ -8,7 +8,7 @@ type THeaderProp = {
 };
 
 const Header = ({ image, navLinks }: THeaderProp) => {
-  const [isNavOpen, seIstNavOpen] = useState(true);
+  const [isNavOpen, seIstNavOpen] = useState(false);
   return (
     <header className="">
       <section className="flex p-3 justify-between">
