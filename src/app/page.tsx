@@ -4,17 +4,19 @@ import Navbar from "./navbar";
 import Reviews from "./motto";
 import Kitchen from "./kitchens";
 import Parallax from "./parallax";
+import CarpenterWorks from "./carpenterWorks";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="px-2 flex flex-col gap-5 py-4">
+      <main className="">
         <ImageSlideShow />
         <CurrentEvents />
         <Reviews />
         <Kitchen />
         <Parallax />
+        <CarpenterWorks />
       </main>
     </>
   );

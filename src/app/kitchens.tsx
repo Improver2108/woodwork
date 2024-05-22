@@ -7,11 +7,11 @@ const kitchens = [
 ];
 function Kitchen() {
   return (
-    <section className="px-2 flex flex-col items-center md:px-[5rem] lg:px-[10rem] gap-3 mt-8">
+    <section className="px-2 flex flex-col items-center md:px-[5rem] lg:px-[10rem] gap-3 mt-8 pb-5">
       <h1 className="uppercase self-start text-xl font-bold text-[#cececd] tracking-wider">
         Kitchens
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-10">
+      <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-10">
         {kitchens.map(([image, color, fontColor], index) => (
           <article
             className="grid cursor-pointer hover:[&_img]:opacity-0"
