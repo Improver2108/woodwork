@@ -11,7 +11,7 @@ const Header = ({ image, navLinks }: THeaderProp) => {
   const [isNavOpen, seIstNavOpen] = useState(false);
   return (
     <header className="">
-      <section className="flex p-3 justify-between">
+      <section className="flex p-3 justify-between" id="header">
         {image}
         <button
           onClick={() => seIstNavOpen(!isNavOpen)}
