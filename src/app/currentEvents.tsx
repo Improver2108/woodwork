@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function CurrentEvents() {
   return (
-    <section className="space-y-3 py-3 px-2 md:px-[5rem] lg:px-[10rem]">
+    <section className="space-y-3 py-3 mt-3 px-2 md:px-[5rem] lg:px-[10rem]">
       <div className="flex gap-3 items-center">
         <h1 className="uppercase tracking-wider text-[#cececd] font-bold text-xl cursor-pointer">
           Current Events

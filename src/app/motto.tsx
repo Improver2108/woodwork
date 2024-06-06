@@ -1,6 +1,6 @@
 function Motto() {
   return (
-    <section className="flex justify-center items-center flex-col gap-2 py-4 text-[#413636]">
+    <section className="flex justify-center items-center mt-3 flex-col gap-2 py-4 text-[#413636]">
       <h2 className="uppercase text-xl font-semibold text-center border-b-[3px] py-1 border-[#413636] mt-3 tracking-wider">
         Timeless Craftsmanship, Tailored to Perfection
       </h2>
