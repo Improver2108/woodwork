@@ -1,12 +1,19 @@
 import Link from "next/link";
 
 const NavLinks = () => {
-  const navLinks = ["kitchen", "space & furniture", "solid wood", "about us"];
+  const navLinks = [
+    ["home", ""],
+    ["about us", "home"],
+    ["kitchens", ""],
+    ["bathrooms", ""],
+    ["other services", ""],
+    ["contact us", ""],
+  ];
   return (
     <ul className="flex flex-col gap-2 px-1 py-2">
-      {navLinks.map((link, index) => (
+      {navLinks.map(([name, link], index) => (
         <li className="uppercase text-xl" key={index}>
-          <Link href={"/"}>{link}</Link>
+          <Link href={`/${link}`}>{name}</Link>
         </li>
       ))}
     </ul>

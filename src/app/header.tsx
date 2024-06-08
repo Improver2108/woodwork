@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 type THeaderProp = {
@@ -9,10 +10,24 @@ type THeaderProp = {
 
 const Header = ({ image, navLinks }: THeaderProp) => {
   const [isNavOpen, seIstNavOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (navRef.current) {
+      if (isNavOpen) {
+        const navHeight = navRef.current?.scrollHeight + "px";
+        navRef.current.style.height = navHeight;
+      } else navRef.current.style.height = "0";
+    }
+  }, [isNavOpen]);
+
   return (
     <header className="">
-      <section className="flex p-3 justify-between" id="header">
+      <section className="flex p-6 justify-between" id="header">
         {image}
+        <Link href={"/"} className="text-2xl font-bold">
+          Home
+        </Link>
         <button
           onClick={() => seIstNavOpen(!isNavOpen)}
           className="cursor-pointer text-2xl"
@@ -21,9 +36,8 @@ const Header = ({ image, navLinks }: THeaderProp) => {
         </button>
       </section>
       <nav
-        className={`overflow-hidden bg-[#dcd9d5] text-[#413636] transition-[height] duration-[500] ease-in-out px-2 ${
-          isNavOpen ? "h-[9.7rem]" : "h-0"
-        } `}
+        ref={navRef}
+        className="overflow-hidden bg-white text-[#413636] transition-[height] duration-[500] ease-in-out px-2"
       >
         {navLinks}
       </nav>
