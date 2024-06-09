@@ -10,7 +10,7 @@ import ContactForm from "./contactForm";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex-1">
       <ImageSlideShow />
       <CurrentEvents />
       <Reviews />
