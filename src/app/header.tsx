@@ -22,7 +22,7 @@ const Header = ({ logo, navLinks, contact }: THeaderProp) => {
   }, [isNavOpen]);
 
   return (
-    <header className="mb-4 px-6 py-5">
+    <header className="mb-4 lg:px-6 px-4 py-5 ">
       <section className="flex justify-between items-center" id="header">
         {logo}
         <button

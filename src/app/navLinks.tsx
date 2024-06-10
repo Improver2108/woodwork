@@ -3,11 +3,9 @@ import Link from "next/link";
 const NavLinks = () => {
   const navLinks = [
     ["home", ""],
-    ["about us", "kitchen"],
-    ["kitchens", "kitchen"],
-    ["bathrooms", "bathroom"],
-    ["other services", "kitchen"],
-    ["contact us", "kitchen"],
+    ["kitchens", "item/kitchen"],
+    ["bathrooms", "item/bathroom"],
+    ["other services", "otherService"],
   ];
   return (
     <ul className="flex flex-col gap-2 px-1 py-2">

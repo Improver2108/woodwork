@@ -4,9 +4,6 @@ const kitchens = [
   ["kitchen1", "#eeeeee", "#413636"],
   ["kitchen2", "#413636", "#c7c6c5"],
   ["kitchen3", "#dcd9d5", "#413636"],
-  ["kitchen3", "#dcd9d5", "#413636"],
-  ["kitchen3", "#dcd9d5", "#413636"],
-  ["kitchen3", "#dcd9d5", "#413636"],
 ];
 function Kitchen() {
   return (
