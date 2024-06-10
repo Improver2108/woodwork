@@ -11,7 +11,7 @@ export default function OtherService() {
         className="max-h-[25rem] object-cover"
       />
       <section className="my-14">
-        <h1 className="text-center w-[50rem] text-lg tracking-wider">
+        <h1 className="text-center max-w-[50rem] px-5 text-lg tracking-wider">
           {`USA Home Remodeling is fully licensed, bonded and insured, and we are
           a fast-growing force in the remodeling world. We strive to achieve
           results homeowners couldn't even dream of, giving you home renovations
