@@ -26,7 +26,7 @@ const ImageSlideShow = () => {
   }, [imageIndex]);
 
   return (
-    <section className="grid w-full h-auto py-4">
+    <section className="grid w-full h-auto">
       {images.map((image, index) => (
         <Image
           key={index}

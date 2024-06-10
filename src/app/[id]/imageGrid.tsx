@@ -2,25 +2,14 @@
 import { useCallback, useState } from "react";
 import Image from "next/image";
 import ImageViewer from "react-simple-image-viewer";
-export default function ImageGrid() {
+
+type TImageGridProp = {
+  images: string[];
+};
+
+export default function ImageGrid({ images }: TImageGridProp) {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
-  const images = [
-    "/chair.png",
-    "/kitchen1.png",
-    "/chair.png",
-    "/kitchen1.png",
-    "/chair.png",
-    "/kitchen1.png",
-    "/chair.png",
-    "/kitchen1.png",
-    "/chair.png",
-    "/kitchen1.png",
-    "/chair.png",
-    "/kitchen1.png",
-    "/chair.png",
-    "/kitchen1.png",
-  ];
   const openImageViewer = useCallback((index: number) => {
     setCurrentImage(index);
     setIsViewerOpen(true);

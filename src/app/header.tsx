@@ -1,14 +1,14 @@
 "use client";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 type THeaderProp = {
-  image: React.ReactNode;
+  logo: React.ReactNode;
   navLinks: React.ReactNode;
+  contact: React.ReactNode;
 };
 
-const Header = ({ image, navLinks }: THeaderProp) => {
+const Header = ({ logo, navLinks, contact }: THeaderProp) => {
   const [isNavOpen, seIstNavOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -22,12 +22,9 @@ const Header = ({ image, navLinks }: THeaderProp) => {
   }, [isNavOpen]);
 
   return (
-    <header className="">
-      <section className="flex p-6 justify-between" id="header">
-        {image}
-        <Link href={"/"} className="text-2xl font-bold">
-          Home
-        </Link>
+    <header className="mb-4 px-6 py-5">
+      <section className="flex justify-between items-center" id="header">
+        {logo}
         <button
           onClick={() => seIstNavOpen(!isNavOpen)}
           className="cursor-pointer text-2xl"
@@ -41,6 +38,7 @@ const Header = ({ image, navLinks }: THeaderProp) => {
       >
         {navLinks}
       </nav>
+      <section className="flex justify-end gap-5">{contact}</section>
     </header>
   );
 };
