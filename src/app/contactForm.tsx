@@ -15,8 +15,8 @@ export default function ContactForm() {
             advise on all issues and select the optimal solution.
           </p>
           <p className="flex flex-col gap-1">
-            <Link href={"tel:8700346580"}>8700346580</Link>
-            <Link href={"tel:8700346580"}>8700346580</Link>
+            <Link href={"tel:1111111111"}>1111111111</Link>
+            <Link href={"tel:1111111111"}>1111111111</Link>
           </p>
           <p className="text-3xl space-x-2">
             <button className="">
@@ -29,9 +29,7 @@ export default function ContactForm() {
           <p className="flex flex-col">
             Write as a mail at:
             <span>
-              <Link href={"mailto:yashrawat2108@gmail.com"}>
-                yashrawat2108@gmail.com
-              </Link>
+              <Link href={"/"}>loremIpsum@gmail.com</Link>
             </span>
           </p>
           <p>
@@ -45,11 +43,11 @@ export default function ContactForm() {
         <div>
           <iframe
             className="w-full rounded-xl border-none"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14011.999575003521!2d77.09098035!3d28.59978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b5f26ea6113%3A0xde1ed272897adb6e!2sTriple%20Thrive%20Fashion!5e0!3m2!1sen!2sin!4v1716483159761!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.5400466074!2d77.04417434001834!3d28.527252739872903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1718526358516!5m2!1sen!2sin"
             width="600"
             height="450"
             loading="lazy"
-          />
+          ></iframe>
         </div>
       </div>
     </section>

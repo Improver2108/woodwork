@@ -18,11 +18,11 @@ const Logo = () => (
 );
 const Contact = () => (
   <Link
-    href={"tel:8700346580"}
+    href={"tel:1111111111"}
     className="flex items-center gap-1 text-[#413636]"
   >
     <MdLocalPhone className="text-lg" />
-    8700356580
+    1111111111
   </Link>
 );
 const Navbar = () => (
