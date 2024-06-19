@@ -1,6 +1,8 @@
+import { extraDummies } from "@/utils/services";
 import Image from "next/image";
 
 export default function OtherService() {
+  const services = extraDummies;
   return (
     <main className="flex flex-col items-center">
       <Image
@@ -12,36 +14,29 @@ export default function OtherService() {
       />
       <section className="my-14">
         <h1 className="text-center max-w-[50rem] px-5 text-lg tracking-wider">
-          {`USA Home Remodeling is fully licensed, bonded and insured, and we are
-          a fast-growing force in the remodeling world. We strive to achieve
-          results homeowners couldn't even dream of, giving you home renovations
-          and remodels that exceed all expectations.`}
+          {`[Your Company Name] is a fast-growing force in the remodeling world. We strive to achieve results homeowners couldn't even dream of, giving you home renovations and remodels that exceed all expectations.`}
         </h1>
       </section>
       <section className="py-10 bg-[#f2f2f2] w-full flex flex-col items-center">
-        {[...Array<null>(4)].map((service, index) => (
+        {services.map(({ heading, description, image }, index) => (
           <div
             key={index}
-            className="grid md:grid-cols-2 max-w-[80rem] gap-10 my-6 px-5"
+            className="grid md:grid-cols-2 max-w-[80rem] gap-10 my-6 px-5 h-20rem"
           >
             <div
               className={`${index % 2 !== 0 ? "lg:order-last" : ""} space-y-5`}
             >
               <h1 className="text-[#413636] text-xl tracking-widest font-medium capitalize ">
-                service
+                {heading}
               </h1>
-              <p className="tracking-wider font-light">
-                {`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-                exercitationem similique praesentium suscipit vero culpa, at
-                nisi voluptatibus est alias amet odit eveniet non officiis vel
-                sed pariatur nihil asperiores dolor? Consequuntur delectus non
-                quos, sunt temporibus ipsam amet nulla quae debitis voluptatem,
-                possimus incidunt fuga! Iusto praesentium, impedit voluptas
-                veniam enim reiciendis sunt nostrum error laudantium, quas ut
-                et.`}
-              </p>
+              <p className="tracking-wider font-light">{description}</p>
             </div>
-            <Image src={"/image.png"} width={800} height={800} alt="image" />
+            <Image
+              src={`/other/${image}`}
+              width={800}
+              height={800}
+              alt="image"
+            />
           </div>
         ))}
       </section>
